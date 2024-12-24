@@ -417,7 +417,6 @@ body {
             animation: snowfall-individual #{random(8) + 4}s // Animation duration between 4-12s
             linear #{random(4)}s // Reduced delay spread to 0-4s
             infinite;
-            opacity: #{random(60) + 40}* 0.01;
         }
     }
 
