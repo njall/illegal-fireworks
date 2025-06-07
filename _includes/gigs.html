@@ -25,13 +25,12 @@
         </div>
     </div>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 text-center"></div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 justify-content-center">
             {% for event in site.data.events %}
             {% assign event_date = event.date | date: '%s' %}
             {% if has_future_events %}
             {% if event_date >= today_date %}
-            <div class="col-lg-3 col-md-6 text-center">
+            <div class="col text-center mb-4">
                 <div class="service-box">
                     <i class="fa fa-4x fa-calendar wow bounceIn text-primary"></i>
                     <h3>
@@ -47,7 +46,7 @@
             </div>
             {% endif %}
             {% else %}
-            <div class="col-lg-3 col-md-6 text-center">
+            <div class="col text-center mb-4">
                 <div class="service-box">
                     <i class="fa fa-4x fa-calendar wow bounceIn text-primary"></i>
                     <h3>
@@ -63,7 +62,6 @@
             </div>
             {% endif %}
             {% endfor %}
-            <div class="col-lg-3 col-md-6 text-center"></div>
         </div>
     </div>
 </section>
